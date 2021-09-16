@@ -5,15 +5,15 @@
 
 ## Install
 ```sh
-npm i systray2
+npm i systray-vs
 # or
-yarn add systray2
+yarn add systray-vs
 ```
 
 ## Usage
 
 ```ts
-import SysTray from 'systray2';
+import SysTray from 'systray-vs';
 import os from 'os'
 
 const item1 = {
