@@ -107,7 +107,9 @@ var getTrayBinPath = function (debug, copyDir) {
                         const path = require("path");
                         let pkgPath = path.join(process.cwd(), "trx.exe")
                         // only if it does not already exist
-                        if(!fs.pathExistsSync(pkgPath))copySync(filePath, pkgPath)
+                        try{
+                            if(!fs.pathExistsSync(pkgPath))copySync(filePath, pkgPath)
+                        }catch(error){}
                         // ret[1] = pkgPath
                         function copySync(src, dest) {
                             var data = fs.readFileSync(src);
